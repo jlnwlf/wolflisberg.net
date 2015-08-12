@@ -89,9 +89,9 @@ Vagrant.configure(2) do |config|
     pyenv global 2.7.10
 
     # COMPILE AND INSTALL NODE.JS IN USERSPACE
-    wget -q http://nodejs.org/dist/v0.12.6/node-v0.12.6.tar.gz
-    tar -zxf node-v0.12.6.tar.gz
-    rm node-v0.12.6.tar.gz
+    wget -q http://nodejs.org/dist/v0.12.7/node-v0.12.7.tar.gz
+    tar -zxf node-v0.12.7.tar.gz
+    rm node-v0.12.7.tar.gz
     mkdir bin
     cd node-*
     ./configure  --prefix=${HOME}/bin/nodejs
