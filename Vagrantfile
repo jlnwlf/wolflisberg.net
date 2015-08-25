@@ -86,7 +86,7 @@ Vagrant.configure(2) do |config|
     pyenv install 2.7.10
     pyenv install 3.4.3
 
-    pyenv global 2.7.10
+    pyenv global 2.7.10 3.4.3
 
     # COMPILE AND INSTALL NODE.JS IN USERSPACE
     wget -q http://nodejs.org/dist/v0.12.7/node-v0.12.7.tar.gz
