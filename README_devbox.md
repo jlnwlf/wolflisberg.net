@@ -18,9 +18,9 @@ This will do a couple of things:
 - Download and install tools needed to compile and install environment we need to work with.
 - Install and compile:
     - 2 latest Python releases (2.7.10 and 3.4.3) with pyenv (it compiles it from source code, which can be slooooow)
-    - Node.js 0.15.6 stable release (compile from source too, sloooooow)
+    - Node.js 0.15.7 stable release (compile from source too, sloooooow)
 
-Just `cd` into this directory (./devbox/) and run:
+Just `cd` into this directory and run:
 
 ``` bash
 vagrant up
