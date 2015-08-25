@@ -12,7 +12,8 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/vivid64"
+  config.vm.hostname = "dev"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -107,10 +108,8 @@ Vagrant.configure(2) do |config|
     # INSTALL BOWER
     bash -c "npm install -g bower grunt-cli" # Should not be necessary, use package.json instead
 
-    # SETTING HOST DETAILS
+    # SETTING HOST OPTIONS
     sed -i "s/#force_color_prompt/force_color_prompt/" ${HOME}/.bashrc
-    sudo su -c "echo 'dev' > /etc/hostname"
-    sudo service hostname restart
 
     # INSTALL GIT PROMPT
     wget -q -O "${HOME}/.git-prompt.sh" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
