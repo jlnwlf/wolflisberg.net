@@ -74,6 +74,9 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm tree htop
     sudo apt-get install -y git
 
+    # Custom git additions
+    wget -qO- https://gist.githubusercontent.com/julienwolflisberg/9fdb5e818528db849717/raw/2a32ae5fdfefd0f47064e9a7c2b85f1f26a0745f/custom_git_config.sh | bash
+
     # INSTALL PYENV WITH MOST RECENT PYTHON INTERPRETERS FOR 2 AND 3
     git clone https://github.com/yyuu/pyenv.git ${HOME}/.pyenv
     echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ${HOME}/.bashrc
