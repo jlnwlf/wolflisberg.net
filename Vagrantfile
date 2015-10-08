@@ -44,13 +44,13 @@ Vagrant.configure(2) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
-  #
-  #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
-  # end
+  config.vm.provider "virtualbox" do |vb|
+    # Display the VirtualBox GUI when booting the machine
+    # vb.gui = true
+
+    # Customize the amount of memory on the VM:
+    vb.memory = "1024"
+  end
   #
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -72,7 +72,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get update -y
 
     sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm tree htop
-    sudo apt-get install -y git
+    sudo apt-get install -y git clang
 
     # Custom git additions
     wget -qO- https://gist.githubusercontent.com/julienwolflisberg/9fdb5e818528db849717/raw/2a32ae5fdfefd0f47064e9a7c2b85f1f26a0745f/custom_git_config.sh | bash
@@ -88,14 +88,14 @@ Vagrant.configure(2) do |config|
     eval "$(pyenv init -)"
 
     pyenv install 2.7.10
-    pyenv install 3.4.3
+    pyenv install 3.5.0
 
-    pyenv global 2.7.10 3.4.3
+    pyenv global 2.7.10 3.5.0
 
     # COMPILE AND INSTALL NODE.JS IN USERSPACE
-    wget -q http://nodejs.org/dist/v0.12.7/node-v0.12.7.tar.gz
-    tar -zxf node-v0.12.7.tar.gz
-    rm node-v0.12.7.tar.gz
+    wget -q http://nodejs.org/dist/v4.1.2/node-v4.1.2.tar.gz
+    tar -zxf node-v4.1.2.tar.gz
+    rm node-v4.1.2.tar.gz
     mkdir bin
     cd node-*
     ./configure  --prefix=${HOME}/bin/nodejs
