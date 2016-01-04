@@ -87,15 +87,15 @@ Vagrant.configure(2) do |config|
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 
-    pyenv install 2.7.10
-    pyenv install 3.5.0
+    pyenv install 2.7.11
+    pyenv install 3.5.1
 
-    pyenv global 2.7.10 3.5.0
+    pyenv global 2.7.11 3.5.1
 
     # COMPILE AND INSTALL NODE.JS IN USERSPACE
-    wget -q http://nodejs.org/dist/v4.1.2/node-v4.1.2.tar.gz
-    tar -zxf node-v4.1.2.tar.gz
-    rm node-v4.1.2.tar.gz
+    wget -q https://nodejs.org/dist/v5.3.0/node-v5.3.0.tar.gz
+    tar -zxf node-v5.3.0.tar.gz
+    rm node-v5.3.0.tar.gz
     mkdir bin
     cd node-*
     ./configure  --prefix=${HOME}/bin/nodejs
