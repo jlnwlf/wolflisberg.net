@@ -8,8 +8,7 @@
 - An internet connection
 - Some patience...
 
-
-## Installation
+## Installation (Vagrant) - DEPRECATED
 
 This will do a couple of things:
 
@@ -33,3 +32,15 @@ vagrant ssh
 ```
 
 to connect to your new local dev server
+
+## Installation (Docker)
+
+``` bash
+docker build -t wolf/sandbox .
+```
+
+And then run a new container with:
+
+``` bash
+docker run -it -h sandbox wolf/sandbox
+```

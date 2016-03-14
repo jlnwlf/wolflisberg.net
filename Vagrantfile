@@ -71,8 +71,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get upgrade -y
     sudo apt-get update -y
 
-    sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm tree htop
-    sudo apt-get install -y git clang
+    sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm tree htop git clang
 
     # Custom git additions
     wget -qO- https://gist.githubusercontent.com/julienwolflisberg/9fdb5e818528db849717/raw/2a32ae5fdfefd0f47064e9a7c2b85f1f26a0745f/custom_git_config.sh | bash
