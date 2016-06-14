@@ -2,13 +2,13 @@
 
 ## Requirements
 
-- Vagrant
+- Docker (or Vagrant - **DEPRECATED**)
 - VirtualBox
 - An OS compatible with both of them (Windows should work, but not tested yet)
 - An internet connection
 - Some patience...
 
-## Installation (Vagrant) - DEPRECATED
+## About
 
 This will do a couple of things:
 
@@ -16,8 +16,25 @@ This will do a couple of things:
 - Download and install latest updates from servers
 - Download and install tools needed to compile and install environment we need to work with.
 - Install and compile:
-    - 2 latest Python releases (2.7.11 and 3.5.1) with pyenv (it compiles it from source code, which can be slooooow)
-    - Node.js 5.3.0 stable release (compile from source too, sloooooow)
+    - 2 latest Python releases with pyenv (it compiles it from source code, which can be slooooow)
+    - Node.js stable release
+    - Bower and Grunt (globally)
+
+## Installation (Docker)
+
+Just `cd` into this directory and run:
+
+``` bash
+docker build --force-rm=true -t wolf/wolflisberg.net:latest .
+```
+
+And then run a new container with:
+
+``` bash
+docker run -it -h sandbox wolf/wolflisberg.net:latest
+```
+
+## Installation (Vagrant) - DEPRECATED
 
 Just `cd` into this directory and run:
 
@@ -32,15 +49,3 @@ vagrant ssh
 ```
 
 to connect to your new local dev server
-
-## Installation (Docker)
-
-``` bash
-docker build -t wolf/sandbox .
-```
-
-And then run a new container with:
-
-``` bash
-docker run -it -h sandbox wolf/sandbox
-```
